@@ -12,7 +12,15 @@ pipeline {
             }
 
             steps {
-                echo 'Deploying'
+                echo 'Building .....'
+            }
+
+            steps {
+                echo 'Testing .....'
+            }
+
+            steps {
+                echo 'Deploying .....'
             }
 
         }
