@@ -11,11 +11,10 @@ pipeline {
                 branch 'master'
             }
 
-            stage('Deploying'){
             steps {
                 echo 'Deploying'
             }
-            }
+
         }
 
                 stage('Example dev') {
