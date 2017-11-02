@@ -1,0 +1,15 @@
+pipeline{
+
+    agent any { 
+
+        when{
+            branch 'dev'
+        }
+        stages{
+
+            stage('Build'){
+                echo 'Building ...'
+            }
+        }
+    }
+}
