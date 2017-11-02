@@ -15,14 +15,6 @@ pipeline {
                 echo 'Building .....'
             }
 
-            steps {
-                echo 'Testing .....'
-            }
-
-            steps {
-                echo 'Deploying .....'
-            }
-
         }
 
                 stage('Example dev') {
