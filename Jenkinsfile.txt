@@ -1,39 +1,37 @@
 pipeline {
     agent any
     stages {
-        stage('Example Build') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Example master') {
+
+        stage('Branch Master') {
             when {
                 branch 'master'
             }
 
             steps {
-                echo 'Building .....'
-
+                echo 'Building The Master Branch...'
                 bat 'mvn clean compile'
             }
 
         }
 
-                stage('Example dev') {
+        stage('Branch Dev') {
             when {
                 branch 'dev'
             }
+
             steps {
-                echo 'dev'
+                echo 'Building dev Branch...'
+                bat 'mvn clean compile'
             }
         }
 
-                stage('Example test') {
+        stage('Branch Test') {
             when {
                 branch 'test'
             }
+
             steps {
-                echo 'test'
+                echo 'Building test Branch...'
             }
         }
 
