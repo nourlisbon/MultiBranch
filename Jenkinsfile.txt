@@ -10,7 +10,7 @@ pipeline {
             steps {
                 echo 'Building The Master Branch...'
                 bat 'mvn clean package'
-                echo 'Archiving Artifacts...'
+                echo 'Archiving Artifacts..'
                 archiveArtifacts '**/*.jar,**/*.war'
 
 
